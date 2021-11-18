@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        .run {
+            width: 256px;
+            height: 256px;
+            background-image: url("animaciones/run.png");
+            animation: run 0.3s steps(7) infinite;
+        }
+        
+        @keyframes run {
+            from {
+                background-position: 0px;
+            }
+            to {
+                background-position: -1790px;
+            }
+        }
+        
+        .mounstruo {
+            background-image: url("animaciones/foto.png");
+            width: 190px;
+            height: 240px;
+            animation: comer 0.3s steps(10) infinite;
+        }
+        
+        @keyframes comer {
+            from {
+                background-position: 0px;
+            }
+            to {
+                background-position: -1900px;
+            }
+        }
+        
+        .explosion {
+            background-image: url("animaciones/explosion.png");
+            width: 100px;
+            height: 100px;
+            animation: pum 0.6s steps(6) infinite;
+        }
+        
+        @keyframes pum {
+            from {
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+            to {
+                background-position-x: 600px;
+                background-position-y: 600px;
+            }
+        }
+        
+        .bitcoin {
+            background-image: url("animaciones/money.jpg");
+            width: 1000px;
+            height: 150px;
+            animation: coin 0.5s steps(7) infinite;
+        }
+        
+        @keyframes coin {
+            from {
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+            to {
+                background-position-x: 1000px;
+                background-position-y: -1000px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="run"></div>
+    <div class="mounstruo"></div>
+    <div class="explosion"></div>
+    <div class="bitcoin"></div>
+</body>
+
+</html>

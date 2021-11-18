@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB</title>
+    <style>
+        body {
+            counter-reset: section;
+        }
+        /*Creamos un counter reset que lo llamamos section*/
+        
+        a::before {
+            counter-increment: section;
+            content: counter(section) ".";
+        }
+        /*empezaremos a poner numeros detras del titulo*/
+        
+        ul {
+            text-align: center;
+            background: rgb(12, 12, 75);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 110%;
+            margin-top: -1px;
+            margin-bottom: 0;
+            margin-left: -10px;
+        }
+        /*Empezamos a dejar la lista de forma que parezca un menu y le damos dimensiones y color*/
+        
+        ul li {
+            float: left;
+        }
+        /*Hacemos que vaya hacia la derecha ordenandose de forma horizontal*/
+        
+        li {
+            width: 23%;
+        }
+        /*le damos el total que queramos que midan los cuadraditos*/
+        
+        ul li a {
+            color: white;
+            display: block;
+            padding: .8em;
+            text-decoration: none;
+        }
+        /*Quitamos la decoracion y le ponemos las letras de color blanco*/
+        
+        h1 {
+            position: absolute;
+            top: 15%;
+            left: 38%;
+        }
+        /*Hacemos que la posicion sea absoluta y lo vamos moviendo*/
+        
+        .contenedor1 {
+            position: relative;
+            text-align: center;
+            background: linear-gradient(344deg, rgba(9, 9, 121, 1) 36%, rgba(0, 212, 255, 1) 68%, rgba(0, 0, 0, 1) 98%);
+            width: 105%;
+            height: 110px;
+            border-radius: 10% 15% 15% 10%;
+            margin-top: -10px;
+            margin-bottom: 0;
+            margin-left: -10px;
+        }
+        /*El primer contenedor tendra la primera gradiente de tres colores y le damos angulo*/
+        
+        a:hover {
+            background-color: rgb(147, 147, 255);
+        }
+        /*acemos que se cambie el color del menu cuando pasemos el puntero por encima*/
+        
+        img {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            float: left;
+            top: -10px;
+            left: 30px;
+        }
+        /*Le damos posicion y volumenes a la imagen*/
+        
+        .textos {
+            display: flex;
+            margin: 0;
+        }
+        
+        .textos>div {
+            margin: 5px;
+        }
+        
+        p {
+            margin-top: -10px;
+            margin-left: 3px;
+            margin-right: 30px;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            background: linear-gradient(356deg, rgba(11, 30, 255, 1) 15%, rgba(0, 251, 255, 1) 36%, rgba(172, 172, 172, 1) 60%);
+            width: 105%;
+            height: 110px;
+            margin-left: -10px;
+            border-radius: 0 60% 0% 70%;
+        }
+        
+        .footer>p {
+            font-size: large;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        
+        @media (max-width:1200px) {
+            img {
+                left: 20px;
+            }
+        }
+        
+        @media (max-width:989px) {
+            .textos {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .texto1 {
+                width: 50%;
+            }
+            .texto2 {
+                position: absolute;
+                width: 50%;
+                left: 50%;
+            }
+            .texto3 {
+                width: 50%;
+            }
+            .texto4 {
+                position: absolute;
+                width: 50%;
+                left: 50%;
+                top: 350px;
+            }
+        }
+        
+        @media (max-width: 890px) {
+            li {
+                width: 50%;
+            }
+        }
+        
+        @media (max-width: 878px) {
+            .textos {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .texto1 {
+                width: 100%;
+            }
+            .texto2 {
+                position: relative;
+                width: 100%;
+                left: 0;
+            }
+            .texto3 {
+                width: 100%;
+            }
+            .texto4 {
+                position: relative;
+                width: 100%;
+                left: 0;
+                top: 5px;
+            }
+        }
+        
+        @media (max-width: 548px) {
+            h1 {
+                top: 15%;
+                left: 2%;
+            }
+            li {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor1">
+        <h1>This is the logo brand header</h1>
+    </div>
+
+    <div class="contenedor2">
+        <ul>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="textos">
+        <div class="texto1">
+
+            <h2> <img src="pngwing.com.png" alt="yy">Our Resources</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo iste ipsam, aliquid sit cum eligendi quidem ut consequuntur dolores quod odit corporis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quasi dolores
+                nobis velit eaque vero illum facilis, placeat voluptates harum quaerat laborum expedita, tempore voluptatibus recusandae.</p>
+        </div>
+        <div class="texto2">
+
+            <h2> <img src="pngwing.com.png" alt="yy">The best team</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo iste ipsam, aliquid sit cum eligendi quidem ut consequuntur dolores quod odit corporis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quasi dolores
+                nobis velit eaque vero illum facilis, placeat voluptates harum quaerat laborum expedita, tempore voluptatibus recusandae.</p>
+        </div>
+        <div class="texto3">
+
+            <h2><img src="pngwing.com.png" alt="yy">This is what we do</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo iste ipsam, aliquid sit cum eligendi quidem ut consequuntur dolores quod odit corporis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quasi dolores
+                nobis velit eaque vero illum facilis, placeat voluptates harum quaerat laborum expedita, tempore voluptatibus recusandae.</p>
+        </div>
+        <div class="texto4">
+
+            <h2> <img src="pngwing.com.png" alt="yy">Surprise</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo iste ipsam, aliquid sit cum eligendi quidem ut consequuntur dolores quod odit corporis.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quasi dolores
+                nobis velit eaque vero illum facilis, placeat voluptates harum quaerat laborum expedita, tempore voluptatibus recusandae.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyleft</p>
+    </div>
+</body>
+
+</html>
